@@ -11,6 +11,7 @@ echo "DMAM" | nc 127.0.0.1 $PORT
 
 DATA=`nc -l $PORT`
 
+echo "3. COMPROBANDO HEADER"
 # SI DATA ES DIFERENTE A OK_HEADER, MENSAJE
 # DE ERROR Y EXIT 1
 if [ "$DATA" != "OK_HEADER" ] 
@@ -25,4 +26,5 @@ FILE_NAME="dragon.txt"
 
 echo "FILE_NAME $FILE_NAME" | nc localhost $PORT
 
+echo "7. RECIBIENDO COMPROBACIÓN FILE_NAME"
 DATA=`nc -l $PORT`
