@@ -35,4 +35,7 @@ echo "6. ENVIANDO OK_FILE_NAME"
 
 echo "OK_FILE_NAME" | nc localhost $PORT
 
+DATA=`nc -l $PORT`
 
+echo "9.- Recibiendo/almacenando el dragón"
+echo "$DATA" > server/dragon.txt
